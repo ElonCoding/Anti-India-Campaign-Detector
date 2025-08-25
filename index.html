@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-India AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/shield-icon.svg" alt="Shield Icon">
+                    <span>Anti-India AI</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Empowering India's Digital Defense</h1>
+                    <p>Advanced AI solutions to detect and neutralize anti-India narratives and misinformation online.</p>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for narratives...">
+                    <button class="btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>Real-time Detection</h3>
+                        <p>Identify and flag malicious content as it emerges.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Sentiment Analysis</h3>
+                        <p>Understand the emotional tone and intent behind narratives.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Network Mapping</h3>
+                        <p>Visualize the spread of misinformation and identify key actors.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Automated Reporting</h3>
+                        <p>Generate comprehensive reports for swift action.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are a dedicated team of AI specialists committed to safeguarding India's digital sovereignty. Our mission is to provide cutting-edge tools that protect national interests from online threats.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to learn more? Reach out to us!</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <section id="search-results" class="search-results-section container mx-auto px-4 py-8 hidden">
+        <h2 class="text-2xl font-bold text-white mb-4">Search Results</h2>
+        <div id="results-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <p id="no-results-message" class="text-center text-gray-400 mt-4 hidden">No results found.</p>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Anti-India AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

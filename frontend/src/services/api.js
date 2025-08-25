@@ -8,3 +8,12 @@ export async function analyzeText(text) {
   });
   return await response.json();
 }
+
+export async function searchSlogans(query) {
+  const response = await fetch(`${API_URL}/search`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query }),
+  });
+  return await response.json();
+}

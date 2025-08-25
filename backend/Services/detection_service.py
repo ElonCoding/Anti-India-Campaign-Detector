@@ -1,5 +1,5 @@
-from models.detector import predict
-from utils.preprocessing import clean_text
+from ..models.detector import predict
+from ..utils.preprocessing import clean_text
 
 def detect_campaign(text: str) -> str:
     cleaned = clean_text(text)
