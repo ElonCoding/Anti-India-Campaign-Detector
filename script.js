@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchResultsSection = document.getElementById('search-results');
     const noResultsMessage = document.getElementById('no-results-message');
 
-    const API_URL = 'http://127.0.0.1:8000'; // Ensure this matches your backend URL
+    const API_URL = 'http://127.0.0.1:8001'; // Ensure this matches your backend URL
 
     searchButton.addEventListener('click', performSearch);
     searchInput.addEventListener('keypress', (e) => {
@@ -53,15 +53,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 searchResultsSection.classList.remove('hidden');
             } else {
-                noResultsMessage.classList.remove('hidden');
-                searchResultsSection.classList.remove('hidden');
+                showModal();
             }
 
         } catch (error) {
             console.error('Error during search:', error);
-            alert('Failed to perform search. Please try again later.');
-            noResultsMessage.classList.remove('hidden'); // Show no results message on error too
-            searchResultsSection.classList.remove('hidden');
+            showModal();
         }
+    }
+
+    // Modal functions
+    function showModal() {
+        const modal = document.getElementById('no-results-modal');
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('no-results-modal');
+        modal.style.display = 'none';
+    }
+
+    // Close modal when clicking outside or on X
+    window.onclick = function(event) {
+        const modal = document.getElementById('no-results-modal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+
+    // Add event listener for close button if it exists
+    const closeBtn = document.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
     }
 });
